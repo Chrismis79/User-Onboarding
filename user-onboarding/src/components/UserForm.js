@@ -6,15 +6,15 @@ import * as Yup from "yup";
 const UserForm = ({errors, touched, values, status}) => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        status && setUsers(users => [...users, status])
-    }, [status])
+        status && setUsers(users => [...users, status]);
+    }, [status]);
 
     return (
         <>
         <div>
             <h1>User-Onboarding Form</h1>
             <Form>
-                <Field tpye="text" name="name" placeholder="Name"/>
+                <Field type="text" name="name" placeholder="Name" />
                 {touched.name && errors.name && (
                     <p>{errors.name}</p>
                 )}
